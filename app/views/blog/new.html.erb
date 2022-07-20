@@ -1,5 +1,5 @@
 <h3>Add a New Blog Post</h3>
-<%= form_with url: '/blogs', local: true do |entry| %>
+<%= form_with model: @blog do |entry| %>
 
     <%= entry.label :title %>
     <%= entry.text_field :title %>
@@ -9,6 +9,8 @@
     <%= entry.text_field :content %>
 
     <br>
-    <%= entry.submit 'Post Blog!' %>
+    <%= entry.submit %>
     
     <% end %>
+
+    <p>Back to <%= link_to 'All the Blogs!', blogs_path %></p>
