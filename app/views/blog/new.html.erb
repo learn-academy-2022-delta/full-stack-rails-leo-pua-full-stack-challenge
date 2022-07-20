@@ -1,0 +1,14 @@
+<h3>Add a New Blog Post</h3>
+<%= form_with url: '/blogs', local: true do |entry| %>
+
+    <%= entry.label :title %>
+    <%= entry.text_field :title %>
+
+    <br>
+    <%= entry.label :content %>
+    <%= entry.text_field :content %>
+
+    <br>
+    <%= entry.submit 'Post Blog!' %>
+    
+    <% end %>
