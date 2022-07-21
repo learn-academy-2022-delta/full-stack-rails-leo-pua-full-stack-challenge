@@ -1,5 +1,6 @@
-<h3>Add a New Blog Post</h3>
-<%= form_with model: @blog do |entry| %>
+<h3>Edit Blog </h3>
+
+<%= form_with model: @blog, method: :patch do |entry| %>
 
     <%= entry.label :title %>
     <%= entry.text_field :title %>
@@ -9,8 +10,8 @@
     <%= entry.text_field :content %>
 
     <br>
-    <%= entry.submit %>
+    <%= entry.submit 'Edit Blog'%>
     
     <% end %>
 
-    <p> Back to <%= link_to 'All the Blogs!', blogs_path %></p>
+    <p>Back to <%= link_to 'All the Blogs!', blogs_path %></p>

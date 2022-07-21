@@ -4,4 +4,11 @@
 <p><%= @blog.content %></p>
 
 <br />
+<p><%= button_to 'Edit Post', edit_path, :method => "get" %></p>
+
+<br />
+<p><%= button_to 'Delete Post', delete_blog_path, method: :delete %></p>
+
+
+<br />
 <p>Back to <%= link_to 'All the Blogs!', blogs_path %></p>
